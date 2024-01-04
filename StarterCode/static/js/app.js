@@ -116,8 +116,8 @@ function buildGauge(wfreq) {
     let space = " ";
     let pathY = String(y);  
     let pathEnd ="Z";
-    let path = mainPath.concat(pathX, space, pathY, pathEnd);
-    let data = [
+    // Remove unused variables
+    // Remove unused variables
         {
             type: "scatter",
             x: [0],
