@@ -105,39 +105,28 @@ function getData(dataset) {
 // Update the chart whenever a new sample is selected.
 
 function buildGauge(wfreq) {
-    let level = parseFloat(wfreq) * 20;
-    let degrees = 180 - level;
-    let radius = 0.5;
-    let radians = (degrees * Math.PI) / 180;
-    let x = radius * Math.cos(radians);
-    let y = radiues * Math.sin(radians);   
-    let mainPath = "M -.0 -0.05 L .0 0.05 L";
-    let pathX = String(x);
-    let space = " ";
-    let pathY = String(y);  
-    let pathEnd ="Z";
-    // Remove unused variables
-    // Remove unused variables
-        {
-            type: "scatter",
-            x: [0],
-            y: [0],
-            marker: {size: 12, color: "850000"},
-            showlegend: false,
-            name: "Freq",}
-        ]
-        }
-document.getElementById("sample-metadata").innerHTML = metadataId;
-
-
-
-
-
-
-
-
-
-
-
-
-
+  let level = parseFloat(wfreq) * 20;
+  let degrees = 180 - level;
+  let radius = 0.5;
+  let radians = (degrees * Math.PI) / 180;
+  let x = radius * Math.cos(radians);
+  let y = radius * Math.sin(radians);   
+  let mainPath = "M -.0 -0.05 L .0 0.05 L";
+  let pathX = String(x);
+  let space = " ";
+  let pathY = String(y);  
+  let pathEnd ="Z";
+  
+  let data = [
+    {
+      type: "scatter",
+      x: [0],
+      y: [0],
+      marker: {size: 12, color: "850000"},
+      showlegend: false,
+      legendgroup: "Freq"
+    }
+  ];
+  
+  document.getElementById("sample-metadata").innerHTML = metadataId;
+}
